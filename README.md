@@ -7,7 +7,7 @@
 3. Run `poetry install`
 4. Install Jupyter kernel in this project's root directory:
    ```bash
-   poetry run python -m ipykernel install --user --name=landlordmapper-data
+   poetry run python -m ipykernel install --user --name=landlordmapper-chicago-data
 5. When opening Jupyter notebooks, select the "landlordmapper-data" kernel
 
 
