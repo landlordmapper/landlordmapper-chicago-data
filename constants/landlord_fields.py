@@ -1,0 +1,280 @@
+class LandlordFields:
+
+    # -------------------------------
+    # ----INPUT LANDLORD DATASETS----
+    # -------------------------------
+    class AddressAnalysisFields:
+
+        ADDRESS = "ADDRESS"
+        COUNT = "COUNT"
+        NAME = "NAME"
+        URL = "URL"
+        NOTES = "NOTES"
+        IS_LANDLORD_ORG = "IS_LANDLORD_ORG"
+        IS_GOVT_AGENCY = "IS_GOVT_AGENCY"
+        IS_LAWFIRM = "IS_LAWFIRM"
+        IS_MISSING_SUITE = "IS_MISSING_SUITE"
+        IS_FINANCIAL_SERVICES = "IS_FINANCIAL_SERVICES"
+        IS_ASSOC_BUS = "IS_ASSOC_BUS"
+        FIX_ADDRESS = "FIX_ADDRESS"
+        IS_FIXED = "IS_FIXED"
+        IS_VIRTUAL_OFFICE_AGENT = "IS_VIRTUAL_OFFICE_AGENT"
+        IS_NONPROFIT = "IS_NONPROFIT"
+        IS_IGNORE_MISC = "IS_IGNORE_MISC"
+        YELP_URL = "YELP_URL"
+        GOOGLE_URL = "GOOGLE_URL"
+
+        COLS_LIST = [
+            ADDRESS,
+            COUNT,
+            NAME,
+            URL,
+            NOTES,
+            IS_LANDLORD_ORG,
+            IS_GOVT_AGENCY,
+            IS_LAWFIRM,
+            IS_MISSING_SUITE,
+            IS_FINANCIAL_SERVICES,
+            IS_ASSOC_BUS,
+            FIX_ADDRESS,
+            IS_FIXED,
+            IS_VIRTUAL_OFFICE_AGENT,
+            IS_NONPROFIT,
+            IS_IGNORE_MISC,
+            YELP_URL,
+            GOOGLE_URL
+        ]
+
+
+    class ValidatedAddressFields:
+
+        RAW_ADDRESS = "RAW_ADDRESS"
+        TAXPAYER_ADDRESS = "TAXPAYER_ADDRESS"
+        TAXPAYER_CITY = "TAXPAYER_CITY"
+        TAXPAYER_STATE = "TAXPAYER_STATE"
+        TAXPAYER_ZIP = "TAXPAYER_ZIP"
+        GEOCODIO_SUCCESS = "GEOCODIO_SUCCESS?"
+        GCD_NUMBER = "GCD_NUMBER"
+        GCD_PREDIRECTIONAL = "GCD_PREDIRECTIONAL"
+        GCD_PREFIX = "GCD_PREFIX"
+        GCD_STREET = "GCD_STREET"
+        GCD_SUFFIX = "GCD_SUFFIX"
+        GCD_POSTDIRECTIONAL = "GCD_POSTDIRECTIONAL"
+        GCD_SECONDARYUNIT = "GCD_SECONDARYUNIT"
+        GCD_SECONDARYNUMBER = "GCD_SECONDARYNUMBER"
+        GCD_CITY = "GCD_CITY"
+        GCD_COUNTY = "GCD_COUNTY"
+        GCD_STATE = "GCD_STATE"
+        GCD_ZIP = "GCD_ZIP"
+        GCD_COUNTRY = "GCD_COUNTRY"
+        GCD_X = "GCD_X"
+        GCD_Y = "GCD_Y"
+        GCD_XCOORD = "GCD_XCOORD"
+        GCD_YCOORD = "GCD_YCOORD"
+        GCD_ACCURACY = "GCD_ACCURACY"
+        GCD_FORMATTED_ADDRESS = "GCD_FORMATTED_ADDRESS"
+
+        DTYPES = {
+            TAXPAYER_ZIP: str,
+            GCD_NUMBER: str,
+            GCD_SECONDARYNUMBER: str,
+            GCD_ZIP: str,
+            "GCD_NUMBER_ADDRESS_1": str,
+            "GCD_SECONDARYNUMBER_ADDRESS_1": str,
+            "GCD_ZIP_ADDRESS_1": str,
+            "GCD_NUMBER_ADDRESS_2": str,
+            "GCD_SECONDARYNUMBER_ADDRESS_2": str,
+            "GCD_ZIP_ADDRESS_2": str,
+            "GCD_NUMBER_ADDRESS_3": str,
+            "GCD_SECONDARYNUMBER_ADDRESS_3": str,
+            "GCD_ZIP_ADDRESS_3": str,
+        }
+
+
+    class PropertyScrapeFields:
+
+        PIN = "PIN"
+        PIN_2 = "PIN_2"
+        TAX_YEAR = "TAX_YEAR"
+        PROP_ADDRESS = "PROP_ADDRESS"
+        PROP_UNIT_NUM = "PROP_UNIT_NUM"
+        PROP_CITY_ZIP = "PROP_CITY_ZIP"
+        MULTIPLE_ADDRESSES = "MULTIPLE_ADDRESSES"
+        NEIGHBORHOOD = "NEIGHBORHOOD"
+        TAX_DISTRICT = "TAX_DISTRICT"
+        KEY_PIN = "KEY_PIN"
+        TOWN_NAME = "TOWN_NAME"
+        TRI_TOWN = "TRI-TOWN"
+        TAXPAYER_NAME = "TAXPAYER_NAME"
+        TAXPAYER_NAME_2 = "TAXPAYER_NAME_2"
+        ADDRESS_TYPE = "ADDRESS_TYPE"
+        TAXPAYER_ADDRESS = "TAXPAYER_ADDRESS"
+        TAXPAYER_CITY = "TAXPAYER_CITY"
+        TAXPAYER_STATE = "TAXPAYER_STATE"
+        TAXPAYER_ZIP = "TAXPAYER_ZIP"
+        ERROR = "ERROR"
+        SCRAPE_SUCCESS = "SCRAPE_SUCCESS?"
+        RAW_ADDRESS = "RAW_ADDRESS"
+        CLASS = "CLASS"
+        KEYPIN = "KEYPIN"
+        CLASSES = "CLASS(ES)"
+
+        DTYPES = {
+            PIN: str,
+            TAX_YEAR: str,
+            TAXPAYER_ZIP: str
+        }
+
+
+    class CommonFields:
+
+        ADDRESS = "ADDRESS"
+        NAME = "NAME"
+
+
+    class CorpFields:
+
+        CORP_STATUS = "CORP-STATUS"
+        CORP_PRES_NAME_ADDR = "CORP-PRES-NAME-ADDR"
+        CORP_SEC_NAME_ADDR = "CORP-SEC-NAME-ADDR"
+        CORP_FILE_NUMBER = "CORP-FILE-NUMBER"
+        CORP_NAME = "CORP-NAME"
+        CORP_PRES_NAME = "CORP-PRES-NAME-ADDR_name"
+        CORP_PRES_ADDR = "CORP-PRES-NAME-ADDR_addr"
+        CORP_PRES_EXTRACT_STATUS = "CORP-PRES-NAME-ADDR_extract_status"
+        CORP_SEC_NAME = "CORP-SEC-NAME-ADDR_name"
+        CORP_SEC_ADDR = "CORP-SEC-NAME-ADDR_addr"
+        CORP_SEC_EXTRACT_STATUS = "CORP-SEC-NAME-ADDR_extract_status"
+
+        DTYPES = {
+            CORP_STATUS: int,
+            CORP_FILE_NUMBER: str,
+        }
+
+
+    class LLCFields:
+
+        LL_STATUS_CODE = "LL-STATUS-CODE"
+        LL_RECORDS_OFF_STREET = "LL-RECORDS-OFF-STREET"
+        LL_RECORDS_OFF_CITY = "LL-RECORDS-OFF-CITY"
+        LL_RECORDS_OFF_ZIP = "LL-RECORDS-OFF-ZIP"
+        LL_FILE_NUMBER = "LL-FILE-NUMBER"
+        LL_NAME = "LL-NAME"
+        LL_AGENT_CODE = "LL-AGENT-CODE"
+        LL_AGENT_NAME = "LL-AGENT-NAME"
+        LL_AGENT_STREET = "LL-AGENT-STREET"
+        LL_AGENT_ZIP = "LL-AGENT-ZIP"
+        LL_AGENT_COUNTY_CODE = "LL-AGENT-COUNTY-CODE"
+        LL_MM_NAME = "LL-MM-NAME"
+        LL_MM_STREET = "LL-MM-STREET"
+        LL_MM_CITY = "LL-MM-CITY"
+        LL_MM_ZIP = "LL-MM-ZIP"
+
+        DTYPES = {
+            LL_STATUS_CODE: int,
+            LL_FILE_NUMBER: str,
+        }
+
+
+    # --------------------------------
+    # ----OUTPUT LANDLORD DATASETS----
+    # --------------------------------
+    class LandlordOutFields:
+
+        CLASS_COMBINED = "CLASS_COMBINED"
+        CORE = "CORE"
+        CORP = "CORP"
+        MATCH_NUM = "MATCH_NUM"
+        MATCH_ZIP = "MATCH_ZIP"
+        CORP_WORDS = "CORP_WORDS"
+        CORP_NUM = "CORP_NUM"
+        PEOPLE_STRUCTURE = "PEOPLE_STRUCTURE"
+        CORP_SINGLE = "CORP_SINGLE"
+        PEOPLE_NAMES = "PEOPLE_NAMES"
+        NETWORK_NAME = "NETWORK_NAME"
+        FINAL_COMPONENT = "FINAL_COMPONENT"
+        IS_BANK = "IS_BANK"
+        IS_TRUST = "IS_TRUST"
+        TRUST_ID = "TRUST_ID"
+
+        LL_RECORDS_OFF_ZIP_MAIN = "LL-RECORDS-OFF-ZIP-MAIN"
+        LL_RECORDS_OFF_ZIP_4 = "LL-RECORDS-OFF-ZIP-4"
+        LL_MM_ZIP_MAIN = "LL-MM-ZIP-MAIN"
+        LL_MM_ZIP_4 = "LL-MM-ZIP-4"
+        LL_AGENT_ZIP_MAIN = "LL-AGENT-ZIP-MAIN"
+        LL_AGENT_ZIP_4 = "LL-AGENT-ZIP-4"
+
+        IS_POBOX = "IS_POBOX"
+        RAW_ADDRESS_CLEANED = "RAW_ADDRESS_CLEANED"
+        CLASS_CODE = "CLASS_CODE"
+        IS_RENTAL = "IS_RENTAL"
+
+        GCD_FORMATTED_MATCH = "GCD_FORMATTED_MATCH"
+
+        ADDRESS_1 = "ADDRESS_1"
+        IS_COMMON_ADDRESS_1 = "IS_COMMON_ADDRESS_1"
+        IS_LANDLORD_ORG_ADDRESS_1 = "IS_LANDLORD_ORG_ADDRESS_1"
+        GCD_FORMATTED_ADDRESS_ADDRESS_1 = "GCD_FORMATTED_ADDRESS_ADDRESS_1"
+        GCD_FORMATTED_ADDRESS_ADDRESS_1_MATCH = "GCD_FORMATTED_ADDRESS_ADDRESS_1_MATCH"
+
+        ADDRESS_2 = "ADDRESS_2"
+        IS_COMMON_ADDRESS_2 = "IS_COMMON_ADDRESS_2"
+        IS_LANDLORD_ORG_ADDRESS_2 = "IS_LANDLORD_ORG_ADDRESS_2"
+        GCD_FORMATTED_ADDRESS_ADDRESS_2 = "GCD_FORMATTED_ADDRESS_ADDRESS_2"
+        GCD_FORMATTED_ADDRESS_ADDRESS_2_MATCH = "GCD_FORMATTED_ADDRESS_ADDRESS_2_MATCH"
+
+        ADDRESS_3 = "ADDRESS_3"
+        IS_COMMON_ADDRESS_3 = "IS_COMMON_ADDRESS_3"
+        IS_LANDLORD_ORG_ADDRESS_3 = "IS_LANDLORD_ORG_ADDRESS_3"
+        GCD_FORMATTED_ADDRESS_ADDRESS_3 = "GCD_FORMATTED_ADDRESS_ADDRESS_3"
+        GCD_FORMATTED_ADDRESS_ADDRESS_3_MATCH = "GCD_FORMATTED_ADDRESS_ADDRESS_3_MATCH"
+
+        CLEAN_NAME = "CLEAN_NAME"
+        CORE_NAME = "CORE_NAME"
+        ENTITY_NAME = "ENTITY_NAME"
+        ENTITY_CLEAN_NAME = "ENTITY_CLEAN_NAME"
+        ENTITY_CORE_NAME = "ENTITY_CORE_NAME"
+        CORP_NAME_CLEAN = "CORP_NAME_CLEAN"
+        LL_NAME_CLEAN = "LL_NAME_CLEAN"
+
+        IS_COMMON_NAME = "IS_COMMON_NAME"
+        IS_COMMON_ADDRESS = "IS_COMMON_ADDRESS"
+        IS_LANDLORD_ORD_ADDRESS = "IS_LANDLORD_ORD_ADDRESS"
+        IS_CORP = "IS_CORP"
+        IS_LLC = "IS_LLC"
+
+        CLEAN_MERGE_ORG = "CLEAN_MERGE_ORG"
+        CORE_MERGE_ORG = "CORE_MERGE_ORG"
+        FUZZY_MERGE_ORG = "FUZZY_MERGE_ORG"
+        FUZZY_MATCH_COMBO = "FUZZY_MATCH_COMBO"
+        FUZZY_MATCH_NAME = "FUZZY_MATCH_NAME"
+
+        ORIGINAL_DOC = "ORIGINAL_DOC"
+        MATCHED_DOC = "MATCHED_DOC"
+        CONF = "CONF"
+        LDIST = "LDIST"
+        CONF1 = "CONF1"
+
+        CLEAN_ADDRESS = "CLEAN_ADDRESS"
+        NAME_ADDRESS = "NAME_ADDRESS"
+        INCLUDE_ADDRESS = "INCLUDE_ADDRESS"
+
+        FUZZY_NAME = "FUZZY_NAME"
+        FUZZY_ADDRESS = "FUZZY_ADDRESS"
+
+        DTYPES = {
+            "PIN": str,
+            "TAXPAYER_ZIP": str,
+            "GCD_NUMBER": str,
+            "GCD_SECONDARYNUMBER": str,
+            "GCD_ZIP": str,
+            "GCD_NUMBER_ADDRESS_1": str,
+            "GCD_SECONDARYNUMBER_ADDRESS_1": str,
+            "GCD_ZIP_ADDRESS_1": str,
+            "GCD_NUMBER_ADDRESS_2": str,
+            "GCD_SECONDARYNUMBER_ADDRESS_2": str,
+            "GCD_ZIP_ADDRESS_2": str,
+            "GCD_NUMBER_ADDRESS_3": str,
+            "GCD_SECONDARYNUMBER_ADDRESS_3": str,
+            "GCD_ZIP_ADDRESS_3": str,
+        }
