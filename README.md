@@ -1,4 +1,4 @@
-# LandlordMapper Chicago Data Workflow
+# Landlord Mapper Chicago Data Workflow
 
 ## Setup
 
