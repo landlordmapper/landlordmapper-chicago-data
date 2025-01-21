@@ -18,7 +18,7 @@
 - Cook County Open Data Portal
   - Cook County Address Points
     - https://datacatalog.cookcountyil.gov/GIS-Maps/Cook-County-Address-Points/78yw-iddh/about_data
- - Building Class Codes
+  - Building Class Codes
     - https://prodassets.cookcountyassessor.com/s3fs-public/form_documents/classcode.pdf
 - Office of the Illinois Secretary of State
   - https://www.ilsos.gov/data/bs/proc_llc_data.pdf
