@@ -4,11 +4,12 @@
 
 1. Install `poetry` if not already installed.
 2. `cd` into the project's root diretory
-3. Run `poetry install`
-4. Install Jupyter kernel in this project's root directory:
+3. Run `git clone https://github.com/landlordmapper/chicago-data.git`
+4. Run `poetry install`
+5. Install Jupyter kernel in this project's root directory:
    ```bash
    poetry run python -m ipykernel install --user --name=landlordmapper-chicago-data
-5. When opening Jupyter notebooks, select the "landlordmapper-chicago-data" kernel
+6. When opening Jupyter notebooks, select the "landlordmapper-chicago-data" kernel
 
 
 ## Data Sources
